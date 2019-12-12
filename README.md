@@ -29,12 +29,12 @@ Una vez allí encontrarás el codigo que nos conecta a la base de datos
   14-  DB_PASSWORD=
   
  
- # Linea 9 = motor de bas de datos  
- # Linea 10 = direccion del host 
- # Linea 11 = puerto 
- # Linea 12 = nombre de la base de datos (andali)
- # Linea 13 = usuario
- # Linea 14 = contraseña () 
+ ## Linea 9 = motor de bas de datos  
+ ## Linea 10 = direccion del host 
+ ## Linea 11 = puerto 
+ ## Linea 12 = nombre de la base de datos (andali)
+ ## Linea 13 = usuario
+ ## Linea 14 = contraseña () 
 
 
 El usuario y la contraseña dependerán de como los tengas en tu base de datos
@@ -47,16 +47,43 @@ El usuario y la contraseña dependerán de como los tengas en tu base de datos
 
 ## Parte 3
 
-Para el que proyecto se ejecute correctamente debes ejecutar las migraciones del mimos, las cuales ya se encuentran creadas dentro del proyecto.
+Para el que proyecto se ejecute correctamente debes ejecutar las migraciones del mimos, las cuales ya se encuentran creadas dentro del proyecto, para esto debemos entrar a nuestra consola y entrar a a dirección de nuestro proyecto:
 
-# Code of Conduct
+##Ejemplo
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+C:\Users\Usuario>cd..
 
-# Security Vulnerabilities
+C:\Users>cd..
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+C:\>cd laravel
 
-# License
+C:\laravel>cd prueba
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+C:\laravel\prueba>
+
+## paso 3.1
+
+una vez allí debemo ejecutar el siguiente comando 
+ 
+ C:\laravel\prueba>php artisan migrate
+ 
+ -Esto nos creará los campos necesarios en nuestra base de datos para que el proyecto funciones correctamente
+ 
+# Información extra
+
+En la ultima version de laravel, el comando que generaba el acceso /login y /register se reemplazo para permitir al usuario definir que librerias trabajar como vue y bootstrap, por lo que "php artisan make:auth" ya no se reconoce como un comadno de laravel.
+
+
+##Metodo nuevo
+
+
+primero debemos descargar este paquete opcional desde composer con el siguiente comando
+
+-composer require laravel/ui
+
+Una vez tengamos descargado este paquete podemos ejecutar el siguieten comando
+
+php artisan ui:auth
+
+quien no generará todo lo necesario para /login y /register
+
