@@ -69,6 +69,12 @@ una vez allí debemo ejecutar el siguiente comando
  
  -Esto nos creará los campos necesarios en nuestra base de datos para que el proyecto funciones correctamente
  
+## paso 4
+
+una vez hayas ejecutado las migraciones solo faltará ejercutar el proyecto con el comando
+
+php artisan serve
+ 
 # Información extra
 
 En la ultima version de laravel, el comando que generaba el acceso /login y /register se reemplazo para permitir al usuario definir que librerias trabajar como vue y bootstrap, por lo que "php artisan make:auth" ya no se reconoce como un comadno de laravel.
